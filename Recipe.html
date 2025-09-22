@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">VKellogg’s</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Product.html">Product</a></li>
+                <li><a href="Recipe.html">Recipes</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!--Banner-->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Explore Diverse Recipes for Every Palate</h1>
+            <p>Explore our collection of diverse recipes, offering something delicious for every palate.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search a recipe">
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
+    <!-- Tittle Best Recipes-->
+    <div class="title-content"><b>Tasty Menu</b>
+        <div class="subtitle">
+          <span class="line"></span>
+          <h3>Best Recipes</h3>
+          <span class="line"></span>
+        </div>
+    </div>
+    <!--Menu Button-->
+    <div class="container">
+        <div class="menu-bar">
+            <button onclick="showCategory('appetizer')">Appetizer & Snacks</button>
+            <button onclick="showCategory('breakfast')">Breakfast & Brunch</button>
+            <button onclick="showCategory('lunch')">Lunch</button>
+            <button onclick="showCategory('dinner')">Dinner</button>
+            <button onclick="showCategory('dessert')">Dessert</button>
+            <button onclick="showCategory('drinks')">Drinks</button>
+            <button onclick="showCategory('all')">View All</button>
+        </div>
+        <!--Button Scroll Down-->
+        <div class="scroll-container">
+            <div class="scroll-down" onclick="scrollToSection('lunchCard')"></div>
+        </div>
+        <div id="meal-cards" class="card-container">
+            <!--Appetizer-->
+            <div class="card" data-category="appetizer">
+                <img src="img/Stuffed Bell Peppers.jpg" alt="Stuffed Bell Peppers">
+                <div class="card-content">
+                    <h3 class="card-title">Stuffed Bell Peppers</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 50 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 4 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.8 (2,500)</span>
+                        <span class="author">by Barrett Heald</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-category="appetizer">
+                <img src="img/Whole Wheat Mini Quiches.jpeg" alt="Whole Wheat Mini Quiches">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Mini Quiches</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 35 min</span>
+                        <span class="servings"><i class="fa fa-users"></i> 6 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.8 (2,000)</span>
+                        <span class="author">by Barrett Heald</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-category="appetizer">
+                <img src="img/Whole Wheat Bruschetta.jpg" alt="Whole Wheat Bruschetta">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Bruschetta</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 15 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 4 Serving</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.7 (1,926)</span>
+                        <span class="author">by Barrett Heald</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-category="appetizer">
+                <img src="img/Bruschetta on Whole Wheat Bread with Tomato Basil Topping.jpg" alt="Bruschetta on Whole Wheat Bread with Tomato Basil Topping">
+                <div class="card-content">
+                    <h3 class="card-title">Bruschetta on Whole Wheat Bread with Tomato Basil Topping</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 15 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 4 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.6 (1,500)</span>
+                        <span class="author">by Barrett Heald</span>
+                    </div>
+                </div>
+            </div>
+            <!--Breakfast-->
+            <div class="card" data-category="breakfast">
+                <img src="img/Whole Wheat Toast with Avocado and Eggs.jpg" alt="Whole Wheat Toast with Avocado and Eggs">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Toast with Avocado and Eggs</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 15 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 2 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.8 (2,000)</span>
+                        <span class="author">by Jhonny Brown</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-category="breakfast">
+                <img src="img/Granola Bars with Whole Wheat and Nuts.jpg" alt="Granola Bars with Whole Wheat and Nuts">
+                <div class="card-content">
+                    <h3 class="card-title">Granola Bars with Whole Wheat and Nuts</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 40 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 12 Bar Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.8 (2,000)</span>
+                        <span class="author">by Jhonny Brown</span>
+                    </div>
+                </div>
+            </div>
+            <!--Lunch-->
+            <div class="card" data-category="lunch">
+                <img src="img/Whole Wheat Flatbread Pizza with Spinach Pesto.jpg" alt="Whole Wheat Pizza With Spinach Pesto & Roasted Vegetables">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Pizza With Spinach Pesto & Roasted Vegetables</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 35 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 4 Serving</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.7 (1,926)</span>
+                        <span class="author">by Nicole McLaughlin</span>
+                    </div>
+                </div>
+            </div>
+            <div id="lunchCard" class="card" data-category="lunch">
+                <img src="img/Whole Wheat Tacos.jpg" alt="Whole Wheat Tacos">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Tacos</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 1 Hr</span>
+                        <span class="servings"><i class="fa fa-users"></i> 6 Serving</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.7 (1,926)</span>
+                        <span class="author">by Nicole McLaughlin</span>
+                    </div>
+                </div>
+            </div>
+            <!--Dinner-->
+            <div class="card" data-category="dinner">
+                <img src="img/Whole Wheat Vegetable Lasagna Roll Ups.jpg" alt="Whole Wheat Vegetable Lasagna Roll Ups">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Vegetable Lasagna Roll Ups</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 45 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 12 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.6 (1,500)</span>
+                        <span class="author">by John Doe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-category="dinner">
+                <img src="img/Whole Wheat Risotto with Mushrooms.jpg" alt="Whole Wheat Risotto with Mushrooms">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Risotto with Mushrooms</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 45 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 12 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.6 (1,500)</span>
+                        <span class="author">by John Doe</span>
+                    </div>
+                </div>
+            </div>
+            <!--Dessert-->
+            <div class="card" data-category="dessert">
+                <img src="img/Whole Wheat Cupcakes with Vanilla Frosting.jpeg" alt="Whole Wheat Cupcakes with Vanilla Frosting">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Cupcakes with Vanilla Frosting</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 1 Hr</span>
+                        <span class="servings"><i class="fa fa-users"></i> 12 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.6 (1,500)</span>
+                        <span class="author">by Lydia Sener</span>
+                    </div>
+                </div>
+            </div>
+            <!--Drinks-->
+            <div class="card" data-category="drinks">
+                <img src="img/Whole Wheat Protein Shake with Almond Butter.jpg" alt="Whole Wheat Protein Shake with Almond Butter">
+                <div class="card-content">
+                    <h3 class="card-title">Whole Wheat Protein Shake with Almond Butter</h3>
+                    <div class="card-meta">
+                        <span class="time"><i class="fa fa-clock"></i> 10 Mins</span>
+                        <span class="servings"><i class="fa fa-users"></i> 2 Servings</span>
+                    </div>
+                    <div class="card-meta">
+                        <span style="color:#f46200;" class="rating"><i class="fa fa-star"></i> 4.6 (1,500)</span>
+                        <span class="author">by Sean</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ABOUT VKellog's</h3>
+                <div class="line"></div>
+                <p>VKellogg's is a website focused on whole grain foods. We feature the best recipes and best-selling products for kids and adults. Find great ideas for healthy, delicious meals that the whole family can enjoy.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/shandy.s.shihab"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/shandyshultons"><i class="fab fa-twitter"></i></a>
+                    <a href="https://id.pinterest.com/ssshandy60/"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.instagram.com/shandyshihab/?hl=id"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@shandyshultonshihab6591?si=AYjiDCLqTDUgQcXT"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>RECENT POSTS</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>
+                        <img src="img/Whole Wheat Chocolate Chip Cookies.jpeg" alt="Post 1">
+                        <div>
+                            <p>Whole Wheat Chocolate Chip Cookies</p>
+                            <span>31 Jun, 2024</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/Whole Wheat Curry with Chickpeas.jpg" alt="Post 2">
+                        <div>
+                            <p>Whole Wheat Curry with Chickpeas</p>
+                            <span>30 Jun, 2024</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/homemade-wheat-pretzels.png" alt="Post 3">
+                        <div>
+                            <p>Whole Wheat Pretzels</p>
+                            <span>29 Jun, 2024</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>WE ARE OPEN</h3>
+                <div class="line"></div>
+                <ul class="opening-hours">
+                    <li>Monday <span>10AM - 9PM</span></li>
+                    <li>Tuesday <span>10AM - 9PM</span></li>
+                    <li>Wednesday <span>10AM - 9PM</span></li>
+                    <li>Thursday <span class="closed">Closed</span></li>
+                    <li>Friday <span>10AM - 9PM</span></li>
+                    <li>Saturday <span>10AM - 9PM</span></li>
+                    <li>Sunday <span>10AM - 9PM</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>All Rights Reserved. Developed by Shandy Shulton Shihab.</p>
+            </div>
+            <div class="footer-right">
+                <a href="Homepage.html">Home</a>
+                <a href="ContactUs.html">Contact</a>
+            </div>
+        </div>
+        <!--Button Scroll Top-->
+        <div id="scrollTop" class="scroll-top" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
